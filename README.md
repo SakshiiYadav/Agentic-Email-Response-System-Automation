@@ -22,7 +22,7 @@ Streamlit App URL: https://agentic-email-response-system-automation.streamlit.ap
 | Frontend | Streamlit |
 | LLM | Groq (LLaMA 3.3 70B) |
 | RAG | SentenceTransformers (`all-MiniLM-L6-v2`) |
-| Vector Search | FAISS / NumPy |
+| Vector Search | FAISS |
 | Language | Python 3.10+ |
 
 ---
