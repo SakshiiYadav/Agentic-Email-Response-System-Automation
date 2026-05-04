@@ -1,5 +1,7 @@
 # Agentic Email Response System
 
+Streamlit App URL: https://agentic-email-response-system-automation.streamlit.app/
+
 An AI-powered application that analyzes customer emails, generates contextual responses, and simulates scheduling using a multi-agent architecture.
 
 ---
