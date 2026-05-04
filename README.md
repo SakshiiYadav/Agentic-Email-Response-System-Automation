@@ -30,25 +30,31 @@ Streamlit App URL: https://agentic-email-response-system-automation.streamlit.ap
 ## Project Structure
 
 ```
-email_agent_system/
+Agentic_Email_Response_System_Automation/
+├── app.py                     # Streamlit application entry point
+├── README.md                  # Project overview and instructions
+├── DOCUMENTATION.md           # Detailed explanation of system
+├── requirements.txt           # Dependencies
+├── .env                       # API keys (not committed)
+├── .gitignore                 # Ignore sensitive and unnecessary files
+├── email_agent.db             # Database file (if used for persistence)
+│
 ├── agents/
-│   ├── classifier_agent.py   # Category · sentiment · urgency scoring
-│   ├── drafting_agent.py     # Personalised response generation
-│   ├── review_agent.py       # Tone · accuracy · completeness check
-│   └── scheduler_agent.py    # Send-time assignment + queue persistence
-├── core/
-│   ├── email_parser.py       # .eml / .txt → standard dict (single + multi-email)
-│   └── rag_engine.py         # FAISS vector store + semantic query
-├── knowledge_base/
-│   └── faq.txt               # Company policies and FAQs for RAG
-├── sample_emails/
-│   └── batch.txt             # Sample multi-email .txt file
-├── data/
-│   └── schedule_queue.json   # Auto-created — persists scheduled emails
-├── app.py                    # Streamlit application entry point
-├── requirements.txt
-├── .env                      # API keys (not committed to git)
-└── README.md
+│   ├── __init__.py
+│   ├── classifier.py          # Email classification (sentiment, category, priority)
+│   ├── drafter.py             # Response generation using LLM
+│   ├── reviewer.py            # Tone, accuracy, and completeness validation
+│   ├── scheduler.py           # Response scheduling logic
+│   ├── rag_agent.py           # RAG implementation (FAISS + embeddings)
+│   └── orchestrator.py        # Pipeline orchestration (agent flow control)
+│
+├── utils/
+│   ├── __init__.py
+│   ├── database.py            # Database handling (if used)
+│   └── sample_emails.py       # Utility for handling sample/test emails
+│
+├── sample_emails/             # Test dataset for evaluation
+
 ```
 
 ---
