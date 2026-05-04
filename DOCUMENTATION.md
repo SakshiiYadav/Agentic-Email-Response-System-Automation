@@ -31,7 +31,7 @@ Customer Emails (file / manual / sample)
             ▼                              │
  ┌──────────────────────────┐              │
  │  RAG Agent               │  FAISS +    │
- │  • FAISS IndexFlatIP     │  TF-IDF     │
+ │  • FAISS IndexFlatIP     │  Transformer based Embedding│
  │  • 19 KB documents       │  vectors    │
  │  • Returns top-3 chunks  │              │
  └──────────────────────────┘              │
