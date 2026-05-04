@@ -146,8 +146,8 @@ email_agent/
 ### RAGAgent — Knowledge Retrieval
 
 **File:** `agents/rag_agent.py`  
-**Method:** FAISS `IndexFlatIP` (inner product = cosine similarity on normalized vectors)  
-**Embedding:** TF-IDF term frequency vectors (no GPU or model download required)
+**Method:** FAISS   
+**Embedding:** SentenceTransformers (all-MiniLM-L6-v2)
 
 **Knowledge Base:** 19 curated documents covering:
 - Refund & billing policies
@@ -158,8 +158,6 @@ email_agent/
 - Product warranty information
 
 **Retrieval:** Top-3 most semantically relevant passages per email query.
-
-**Fallback:** If `faiss-cpu` is not installed, falls back to pure NumPy cosine similarity.
 
 ---
 
@@ -237,7 +235,7 @@ The inbox queue always displays emails **sorted by urgency score** descending, e
 Query = email_subject + email_body
     │
     ▼
-TF-IDF vectorization → query vector (normalized)
+SentenceTransformers vectorization → query vector (normalized)
     │
     ▼
 FAISS IndexFlatIP.search(query_vector, k=3)
@@ -299,9 +297,9 @@ streamlit run app.py
 ### Usage
 1. Open the app in your browser (usually http://localhost:8501)
 2. Paste your **Groq API key** in the sidebar
-3. Click **"⚡ Load Sample Emails"** to see the full pipeline in action
+3. Click **"Load Sample Emails"** to see the full pipeline in action
 4. Click any email card → **"View →"** to inspect classification, RAG context, drafted response, confidence score, and schedule
-5. Use the **"✏️ Edit Response"** area to make adjustments
+5. Use the **"Edit Response"** area to make adjustments
 6. Click **"✅ Approve & Mark Scheduled"** to approve a response
 7. Check the **Analytics** tab for aggregate metrics
 
