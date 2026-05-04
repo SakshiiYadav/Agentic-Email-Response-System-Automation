@@ -1,0 +1,30 @@
+From: david.patel@techcorp.io
+To: support@ourcompany.com
+Subject: App crashing on iOS 17 after update v4.2.1 — critical bug
+Date: Mon, 04 May 2026 07:45:00 +0000
+Message-ID: <20260504074500.david@techcorp.io>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Hi Support,
+
+Your mobile app has been crashing every single time I try to open the Dashboard tab since your last update (v4.2.1 released April 28th).
+
+Reproduction steps:
+1. Open app
+2. Log in successfully
+3. Tap "Dashboard" in bottom nav
+4. App crashes immediately to home screen
+
+Device info:
+- Device: iPhone 14 Pro
+- OS: iOS 17.2.1
+- App version: 4.2.1
+- Account: david.patel@techcorp.io
+
+This is a business-critical issue for me. I use your dashboard to monitor live data for my clients and the crash is costing me money every hour it is broken. I have already lost two client calls because of this.
+
+Please treat this as P1 and provide a fix or workaround urgently. I am happy to jump on a call or provide additional logs.
+
+David Patel
+Senior Analyst, TechCorp
